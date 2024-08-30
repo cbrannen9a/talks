@@ -1,5 +1,7 @@
 # Talks
 
+Slides hosted on Github pages [Talks](cbrannen9a.github.io/talks/talks/slides)
+
 ## Introduction
 
 This repository contains a collection of presentations created using [Marp](https://marp.app/) Marp is a presentation tool that leverages Markdown syntax for content and CSS-like styles for design. This approach makes it easy to create visually appealing and maintainable slides.
