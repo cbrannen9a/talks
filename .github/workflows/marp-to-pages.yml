@@ -3,7 +3,7 @@ concurrency: marp-to-pages
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
     types:
       - opened
@@ -12,12 +12,11 @@ on:
       - closed
 
 jobs:
-  build-and-deploy:   
-  # Combined build and deployment job
+  build-and-deploy:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-      pull_requests: write  # Needed for PR preview deployment
+      pull-requests: write
     steps:
       - uses: actions/checkout@v3
 
@@ -29,7 +28,7 @@ jobs:
         if: ${{ github.event_name == 'pull_request' }}
         uses: rossjrw/pr-preview-action@v1
         with:
-          source-dir: ./build/  # Assuming the script creates the build directory
+          source-dir: ./build/ # Assuming the script creates the build directory
           preview-branch: gh-pages
           umbrella-dir: pr-preview
 
@@ -38,5 +37,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: ./build/  # Assuming the script creates the build directory
+          folder: ./build/ # Assuming the script creates the build directory
           clean-exclude: pr-preview/
