@@ -190,7 +190,7 @@ export function Search() {
 
 ---
 
-![bg right w:424 h:141](./assets/search-query-example.png)
+![bg right w:346 h:152](./assets/search-query-example.png)
 
 Navigate to `/search` Entering a search value and submitting should generate just update the url with search params `/search?query=example`
 
