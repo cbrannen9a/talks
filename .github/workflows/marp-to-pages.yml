@@ -20,6 +20,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Install dependencies
+        run: yarn install
+
       - name: Run build script
         run: |
           ./build.sh  # Assuming build.sh is in the root of your repository
