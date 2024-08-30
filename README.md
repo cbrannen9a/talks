@@ -1,6 +1,6 @@
 # Talks
 
-Slides hosted on Github pages [Talks](cbrannen9a.github.io/talks/talks/slides)
+Slides hosted on Github pages [Talks](https://cbrannen9a.github.io/talks/talks/slides)
 
 ## Introduction
 
