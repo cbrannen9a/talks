@@ -1,0 +1,42 @@
+name: marp-to-pages
+concurrency: marp-to-pages
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - closed
+
+jobs:
+  build-and-deploy:   
+  # Combined build and deployment job
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull_requests: write  # Needed for PR preview deployment
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run build script
+        run: |
+          ./build.sh  # Assuming build.sh is in the root of your repository
+
+      - name: Deploy preview (PR only)
+        if: ${{ github.event_name == 'pull_request' }}
+        uses: rossjrw/pr-preview-action@v1
+        with:
+          source-dir: ./build/  # Assuming the script creates the build directory
+          preview-branch: gh-pages
+          umbrella-dir: pr-preview
+
+      - name: Deploy production (push only)
+        if: ${{ github.event_name == 'push' }}
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: ./build/  # Assuming the script creates the build directory
+          clean-exclude: pr-preview/
