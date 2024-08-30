@@ -43,3 +43,11 @@ if using any html in slides to correct generate add `--html`
 Drag the generated `html` file on to the browser
 
 View slides: Open the generated HTML or PDF files in a web browser or PDF viewer.
+
+Alternative
+
+```sh
+    yarn build
+```
+
+will make a `/build` directory with relevant files
