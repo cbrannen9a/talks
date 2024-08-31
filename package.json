@@ -1,8 +1,7 @@
 {
   "name": "talks",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Collect of slides for talks using Marp",
   "scripts": {
     "build": "./build.sh"
   },

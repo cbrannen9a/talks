@@ -15,9 +15,9 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 
 <ul >
     <li>
-        <a href="https://cbrannen9a.github.io/talks/talks/how-js-works/slides">A brief guide to Javascript</a>
+        <a href="https://cbrannen9a.github.io/talks/talks/how-js-works/">A brief guide to Javascript</a>
     </li>
     <li>
-        <a href=https://cbrannen9a.github.io/talks/talks/starter-remix/slides>A starter guide to building Remix App</a>
+        <a href="https://cbrannen9a.github.io/talks/talks/starter-remix/">A starter guide to building Remix App</a>
     </li>
 </ul>
