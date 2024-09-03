@@ -14,7 +14,7 @@ _class: invert
 paginate: skip
 -->
 
-![bg center:50% 80%](./assets//remix-glowing.svg)
+![bg center:50% 80%](./assets/remix-glowing.svg)
 
 ---
 
@@ -411,3 +411,5 @@ export { Search as default };
 - Entering a search term should now return a set of results
 
 ---
+
+![bg center:40% 60%](./assets/search-results.png)
